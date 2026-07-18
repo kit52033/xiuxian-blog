@@ -1,0 +1,98 @@
+{{- define "main" -}}
+
+<main id="main">
+  <div class="home-hero">
+    <h1>🌀 修仙研究院</h1>
+    <p class="subtitle">修仙 · 都市修真 · 仙俠點評</p>
+    <p class="description">每日更新熱門修仙小說分析，從開局到結局全方位點評</p>
+  </div>
+
+  <section class="home-posts">
+    <h2>📖 最新文章</h2>
+    {{ range first 10 (where site.RegularPages "Section" "ne" "") }}
+    <article class="post-item">
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      <div class="post-meta">
+        <span>{{ .Date.Format "2006-01-02" }}</span>
+        {{ with .Params.categories }}
+        <span>｜</span>
+        {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+        {{ end }}
+      </div>
+      <p class="post-summary">{{ .Summary }}</p>
+    </article>
+    {{ end }}
+  </section>
+
+  <section class="home-categories">
+    <h2>📚 分類</h2>
+    <div class="category-grid">
+      <a href="/categories/reviews/" class="category-card">
+        <h3>📝 小說點評</h3>
+        <p>熱門作品深度評測</p>
+      </a>
+      <a href="/categories/analysis/" class="category-card">
+        <h3>🔍 深度分析</h3>
+        <p>角色、情節、世界觀拆解</p>
+      </a>
+      <a href="/categories/tier/" class="category-card">
+        <h3>🏆 角色排行</h3>
+        <p>實力排行榜單</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="donation">
+    <h2>💰 支持一下</h2>
+    <p>如果內容幫到你，可以讚賞一下：</p>
+    <div class="crypto-addresses">
+      <p><strong>BTC:</strong> <code>bc1q...</code></p>
+      <p><strong>ETH:</strong> <code>0x...</code></p>
+    </div>
+  </section>
+</main>
+
+<style>
+.home-hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.home-hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+.subtitle { font-size: 1.2rem; color: #666; }
+.description { margin-top: 1rem; color: #888; }
+.home-posts h2, .home-categories h2, .donation h2 {
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary);
+}
+.post-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+.post-meta { font-size: 0.9rem; color: #888; margin: 0.5rem 0; }
+.tag { background: #f0f0f0; padding: 2px 8px; border-radius: 4px; margin: 0 2px; }
+.post-summary { color: #555; }
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.category-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--border);
+  transition: transform 0.2s;
+}
+.category-card:hover { transform: translateY(-2px); }
+.category-card h3 { margin: 0 0 0.5rem; }
+.category-card p { margin: 0; color: #666; font-size: 0.9rem; }
+.donation { background: #f9f9f9; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; }
+.crypto-addresses { margin-top: 1rem; }
+.crypto-addresses code { background: #eee; padding: 0.5rem; border-radius: 4px; }
+</style>
+{{- end -}}

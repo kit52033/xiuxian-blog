@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on 修仙研究院</title>
+    <link>https://xiuxian.example.com/tags/</link>
+    <description>Recent content in Tags on 修仙研究院</description>
+    <image>
+      <title>修仙研究院</title>
+      <url>https://xiuxian.example.com/og-image.jpg</url>
+      <link>https://xiuxian.example.com/og-image.jpg</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>zh-hant</language>
+    <lastBuildDate>Sat, 18 Jul 2026 18:00:56 +0800</lastBuildDate>
+    <atom:link href="https://xiuxian.example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>小說</title>
+      <link>https://xiuxian.example.com/tags/%E5%B0%8F%E8%AA%AA/</link>
+      <pubDate>Sat, 18 Jul 2026 18:00:56 +0800</pubDate>
+      <guid>https://xiuxian.example.com/tags/%E5%B0%8F%E8%AA%AA/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>修仙</title>
+      <link>https://xiuxian.example.com/tags/%E4%BF%AE%E4%BB%99/</link>
+      <pubDate>Sat, 18 Jul 2026 18:00:56 +0800</pubDate>
+      <guid>https://xiuxian.example.com/tags/%E4%BF%AE%E4%BB%99/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>推薦</title>
+      <link>https://xiuxian.example.com/tags/%E6%8E%A8%E8%96%A6/</link>
+      <pubDate>Sat, 18 Jul 2026 18:00:56 +0800</pubDate>
+      <guid>https://xiuxian.example.com/tags/%E6%8E%A8%E8%96%A6/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

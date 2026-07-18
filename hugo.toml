@@ -1,0 +1,42 @@
+baseURL = "https://xiuxian.example.com/"
+languageCode = "zh-hant"
+title = "修仙研究院"
+theme = "PaperMod"
+
+defaultContentLanguage = "zh-hant"
+hasCJKLanguage = true
+
+[params]
+  subtitle = "修仙小說研究院 | 都市修真 | 仙俠點評"
+  description = "最專業的修仙/都市修真小說研究院，分享熱門作品點評、開局分析、角色排行"
+  keywords = ["修仙", "都市修真", "小說", "仙俠", "網文"]
+  author = "黑洞 🌀"
+  images = ["/og-image.jpg"]
+  
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "首頁"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "reviews"
+    name = "小說點評"
+    url = "/categories/reviews/"
+    weight = 2
+  [[menu.main]]
+    identifier = "analysis"
+    name = "深度分析"
+    url = "/categories/analysis/"
+    weight = 3
+  [[menu.main]]
+    identifier = "tier"
+    name = "角色排行"
+    url = "/categories/tier/"
+    weight = 4
+
+[build]
+  writeStats = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
